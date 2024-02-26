@@ -29,7 +29,7 @@ contract ChallengeToken is ERC1155, Ownable {
     // Function to mint a single Challenge Token
     function mintChallengeToken(address receivingWallet) public onlyOwner {
         require(!challengeAwarded[receivingWallet], "This wallet has already been awarded a challenge token");
-        
+
         _mint(receivingWallet, CHALLENGE_TOKEN_ID, 1, "");
         challengesAwarded++;
         challengeAwarded[receivingWallet] = true;
@@ -56,7 +56,7 @@ contract ChallengeToken is ERC1155, Ownable {
         return (challengeMetadata.title, challengeMetadata.description, challengeMetadata.imageUrl);
     }
 
-      function getChallengesAwarded() public view returns (uint256) {
+    function getChallengesAwarded() public view returns (uint256) {
         return challengesAwarded;
     }
 }
