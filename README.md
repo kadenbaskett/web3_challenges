@@ -49,6 +49,7 @@ $ anvil
 
 ```shell
 $ forge script script/ChallengeRegistry.s.sol:ChallengeRegistryScript --rpc-url https://sepolia.infura.io/v3/$INFURA_API_KEY --private-key $PRIVATE_KEY
+```
 
 ### Deploy
 
